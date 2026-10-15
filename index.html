@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>For Yashika 💗</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Pacifico&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="floating-hearts" aria-hidden="true"></div>
+  <header class="topbar">
+    <a class="brand" href="#home">a little world for Yashika <span>♡</span></a>
+    <button id="musicBtn" class="music-btn" type="button" aria-pressed="false">♫ Play our song</button>
+  </header>
+
+  <main>
+    <section class="hero section" id="home">
+      <div class="hero-sticker sticker-one">♡</div><div class="hero-sticker sticker-two">✿</div>
+      <p class="eyebrow">made for one very special girl</p>
+      <h1>Happy Birthday,<br><span class="script">Yashika</span> 💗</h1>
+      <p class="hero-copy">A little scrapbook of us, a few things I don't say enough,<br>and a whole lot of love. Ready, birthday girl?</p>
+      <button class="primary-btn" id="startBtn" type="button">Come into our little world <span>♡</span></button>
+      <p class="tiny-note">handmade for you, not borrowed from the internet</p>
+      <div class="hero-photo-wrap">
+        <img src="images/photo-01.jpg" alt="A favourite photo of Yashika and me" onerror="this.style.display='none'; this.parentElement.classList.add('photo-placeholder'); this.parentElement.innerHTML='<span>📸</span><small>Your first photo goes here<br>images/photo-01.jpg</small>';">
+      </div>
+    </section>
+
+    <section class="section intro hidden" id="intro">
+      <p class="eyebrow">chapter one · the little things</p>
+      <h2>It's the little things that make you <span class="script">you.</span></h2>
+      <p class="section-copy">Not just the big moments. It's our long talks, seeing you almost every day, the way you care, the food you make, and all the tiny details that have quietly found a place in my heart.</p>
+      <div class="stats-row">
+        <div><strong>10</strong><span>little memories</span></div>
+        <div><strong>∞</strong><span>things I adore</span></div>
+        <div><strong>1</strong><span>my Yashika</span></div>
+      </div>
+    </section>
+
+    <section class="section memories hidden" id="memories">
+      <p class="eyebrow">chapter two · our scrapbook</p>
+      <h2>Ten pictures, <span class="script">a thousand feelings.</span></h2>
+      <div class="photo-grid" id="photoGrid"></div>
+    </section>
+
+    <section class="section quiz-section hidden" id="quiz">
+      <p class="eyebrow">chapter three · important research</p>
+      <h2>A very serious quiz about <span class="script">us.</span></h2>
+      <p class="section-copy">Please answer honestly. The momo committee is watching. 🥟</p>
+      <div class="quiz-card">
+        <div class="quiz-progress" id="quizProgress">QUESTION 1 OF 3</div>
+        <h3 id="questionText"></h3>
+        <div class="answers" id="answers"></div>
+        <p id="quizFeedback" class="quiz-feedback" aria-live="polite"></p>
+        <button id="nextQuestion" class="primary-btn hidden" type="button">Next question →</button>
+      </div>
+    </section>
+
+    <section class="section gift-section hidden" id="gift">
+      <p class="eyebrow">chapter four · a small surprise</p>
+      <h2>For the girl who shares her <span class="script">momos.</span></h2>
+      <p class="section-copy">Tap the gift, birthday girl. No plate-packing negotiations required this time. 🥟</p>
+      <button class="gift-box" id="giftBox" type="button" aria-label="Reveal your gift">
+        <span class="gift-bow">♡</span><span class="gift-lid"></span><span class="gift-body">🎁</span><span class="gift-sparkle">✦</span>
+      </button>
+      <div id="giftMessage" class="gift-message hidden">
+        <span class="big-heart">🌷</span>
+        <h3>One more date, just us?</h3>
+        <p id="giftText"></p>
+      </div>
+    </section>
+
+    <section class="section letter-section hidden" id="letter">
+      <p class="eyebrow">chapter five · things I want you to know</p>
+      <h2>Dear <span class="script">Yashika,</span></h2>
+      <p class="section-copy">Some feelings are easier to write down slowly, so you can keep them and read them whenever you want.</p>
+      <button class="envelope" id="openLetter" type="button" aria-label="Open your letter">
+        <span class="envelope-heart">♡</span><span class="envelope-flap"></span><span class="envelope-label">a letter for my girl</span>
+      </button>
+      <article id="letterPaper" class="letter-paper hidden">
+        <div id="letterContent"></div>
+        <p class="signature">With all my affection, <span class="script">your person ♡</span></p>
+      </article>
+    </section>
+
+    <section class="section finale hidden" id="finale">
+      <p class="eyebrow">one last little moment</p>
+      <h2>Make a wish, <span class="script">Yashika.</span></h2>
+      <div class="cake" aria-label="Birthday cake">
+        <div class="flames"><span></span><span></span><span></span></div>
+        <div class="candles"><i></i><i></i><i></i></div>
+        <div class="cake-top"></div><div class="cake-middle"></div><div class="cake-bottom"></div>
+      </div>
+      <button class="primary-btn" id="wishBtn" type="button">Blow the candles ✨</button>
+      <p id="wishMessage" class="wish-message"></p>
+      <p class="final-note">I hope this year is gentle with you, full of little joys, delicious food, pretty tulips, and so many reasons to smile. And I hope I get to be there for a lot of those smiles. <span>♡</span></p>
+      <button class="text-btn" id="restartBtn" type="button">Start our little adventure again ↺</button>
+    </section>
+  </main>
+  <footer>made for Yashika, with care and a suspicious amount of momo thoughts <span>♡</span></footer>
+
+  <div id="lightbox" class="lightbox hidden" role="dialog" aria-modal="true" aria-label="Photo preview">
+    <button id="closeLightbox" class="close-lightbox" type="button" aria-label="Close photo">×</button>
+    <img id="lightboxImage" src="" alt="Memory enlarged"><p id="lightboxCaption"></p>
+  </div>
+  <audio id="backgroundMusic" src="audio/our-song.mp3" loop preload="none"></audio>
+  <script src="script.js"></script>
+</body>
+</html>
