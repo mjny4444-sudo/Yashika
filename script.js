@@ -29,7 +29,7 @@ I don’t know what the future holds, but I know I want to make many more memori
 
 I love you. ❤️
 With a very full heart,
-your person ♡`;
+your Mynk ♡`;
 
 // Edit these to match your own inside jokes.
 const quizQuestions = [
@@ -82,6 +82,57 @@ memories.forEach((memory, index) => {
   card.append(photoButton, caption);
   photoGrid.appendChild(card);
 });
+
+/* YASHIKA'S BIRTHDAY PHOTO GALLERY */
+
+const birthdayMemories = [
+  { file: "birthday-21.jpg", caption: "Your beautiful birthday smile ♡" },
+  { file: "birthday-22.jpg", caption: "My favourite birthday girl 🌷" },
+  { file: "birthday-23.jpg", caption: "A little moment to remember 💗" },
+  { file: "birthday-24.jpg", caption: "You make every moment special ✨" },
+  { file: "birthday-25.jpg", caption: "One for our scrapbook ♡" },
+  { file: "birthday-26.jpg", caption: "That smile, always 🥹" },
+  { file: "birthday-27.jpg", caption: "More memories with you 💗" },
+  { file: "birthday-28.jpg", caption: "A day to remember ✨" },
+  { file: "birthday-29.jpg", caption: "My pretty birthday girl ♡" },
+  { file: "birthday-30.jpg", caption: "A memory to keep forever 🌷" }
+];
+
+const birthdayGrid = document.getElementById("birthdayPhotoGrid");
+
+if (birthdayGrid) {
+  birthdayMemories.forEach((memory, index) => {
+    const card = document.createElement("article");
+    card.className = "photo-card";
+
+    const tilts = [-2, 1.5, -1, 2, -1.5];
+    card.style.setProperty("--tilt", `${tilts[index % tilts.length]}deg`);
+
+    const photoButton = document.createElement("button");
+    photoButton.type = "button";
+    photoButton.setAttribute(
+      "aria-label",
+      `Open birthday photo ${index + 1}`
+    );
+
+    const img = document.createElement("img");
+    img.src = `images/${memory.file}`;
+    img.alt = memory.caption;
+    img.loading = "lazy";
+
+    photoButton.appendChild(img);
+
+    photoButton.addEventListener("click", () => {
+      openLightbox(`images/${memory.file}`, memory.caption);
+    });
+
+    const caption = document.createElement("p");
+    caption.textContent = memory.caption;
+
+    card.append(photoButton, caption);
+    birthdayGrid.appendChild(card);
+  });
+}
 
 document.getElementById("letterContent").innerHTML = loveLetter.split("\n\n")
   .map(paragraph => `<p>${escapeHTML(paragraph).replace(/\n/g, "<br>")}</p>`).join("");
